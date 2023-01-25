@@ -6,8 +6,6 @@ import AdoptPet from './AdoptPet';
 import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import Footer from './Footer';
-import Footer from './Footer';
-// import PetSpecs from './PetSpecs';
 
 const API = "http://localhost:8001/pets"
 
@@ -25,10 +23,13 @@ function App() {
   }, [])
   return (
     <>
-    <Home/>
-    <AdoptPet pets={pets}/>
-    {/* <PetSpecs/> */}
-    <Footer/>
+      <Navbar/>
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="about" element={<AboutUs />} />
+      <Route path="adopt" element={<AdoptPet pets={pets}/>} />
+      </Routes>
+      <Footer/>
     </>
   );
 }
