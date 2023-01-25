@@ -1,7 +1,6 @@
 import React from "react";
 import img from "../images/dog2.png"
 
-
 function Home(){
     return(
         <>
@@ -17,6 +16,7 @@ function Home(){
       <img src={img} alt="Adorable Pet" style={{ width: '50%',paddingRight:'40px'}} />
     </div>
 </section>
+
         </>
     )
 } 

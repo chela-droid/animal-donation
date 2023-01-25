@@ -5,6 +5,7 @@ import Home from './Home';
 import AdoptPet from './AdoptPet';
 import Navbar from './Navbar';
 import AboutUs from './AboutUs';
+import Footer from './Footer';
 
 const API = "http://localhost:8001/pets"
 
@@ -22,13 +23,13 @@ function App() {
   }, [])
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="about" element={<AboutUs />} />
       <Route path="adopt" element={<AdoptPet pets={pets}/>} />
       </Routes>
-
+      <Footer/>
     </>
   );
 }
