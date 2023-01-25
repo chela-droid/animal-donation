@@ -3,7 +3,7 @@ import '../App.css';
 import Home from './Home';
 import AdoptPet from './AdoptPet';
 import Footer from './Footer';
-import AboutUs from './AboutUs';
+// import PetSpecs from './PetSpecs';
 
 const API = "http://localhost:8001/pets"
 
@@ -21,8 +21,8 @@ function App() {
   return (
     <>
     <Home/>
-    <AboutUs/>
     <AdoptPet pets={pets}/>
+    {/* <PetSpecs/> */}
     <Footer/>
     </>
   );
