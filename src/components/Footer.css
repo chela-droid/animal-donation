@@ -1,0 +1,15 @@
+.footer{
+    height: 100vh !important;
+    
+  }
+  .foot{
+    height: 22vh ;
+    background-color: #FBA633;
+  }
+  .pet h2{
+    color: #3388fB;
+  }
+  
+  .pet p{
+    font-size:large
+  }
