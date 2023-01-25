@@ -3,5 +3,14 @@
         padding: 20px 50px;
         border-style: none;
         border-radius: 20px;
-        margin-top: 50px;
+}
+.nav-item{
+padding-inline: 40px;
+font-size: x-large;
+}
+.navbar-brand{
+        font-size: xx-large;
+}
+.home-text{
+padding-left: 5%;
 }
