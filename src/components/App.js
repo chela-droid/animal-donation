@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import Footer from './Footer';
 
-const API = "http://localhost:8001/pets"
+const API = "http://localhost:3000/pets"
 
 
 function App() {
