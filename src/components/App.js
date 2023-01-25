@@ -6,6 +6,7 @@ import AdoptPet from './AdoptPet';
 import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import Footer from './Footer';
+import Footer from './Footer';
 // import PetSpecs from './PetSpecs';
 
 const API = "http://localhost:8001/pets"
