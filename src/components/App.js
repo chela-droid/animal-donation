@@ -6,8 +6,9 @@ import AdoptPet from './AdoptPet';
 import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import Footer from './Footer';
+import AddPet from './AddPet';
 
-const API = "http://localhost:3000/pets"
+const API = "http://localhost:8001/pets"
 
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
       .then(setPets)
 
   }, [])
+
+  function handleAddPet(formData){
+    setPets([...pets,formData])
+  }
   return (
     <>
       <Navbar/>
@@ -29,6 +34,7 @@ function App() {
       <Route path="about" element={<AboutUs />} />
       <Route path="adopt" element={<AdoptPet pets={pets}/>} />
       </Routes>
+      <AddPet onAddPet={handleAddPet}/>
       <Footer/>
     </>
   );

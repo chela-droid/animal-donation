@@ -1,0 +1,29 @@
+input{
+    display: block;
+    margin-left: 20px;
+    padding: 10px;
+    margin-top: 50px;
+    box-shadow: 0 2px 2px black;
+    margin-left:15%;
+    width: 25vw;
+    text-align: center;
+    font-size:large;
+}
+#form{
+    border: 1px solid;
+    width: 35vw;
+    margin-left: 35%;
+}
+#button{
+    font-size: large;
+    width: 25vw;
+    margin-left: 15%;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: #fba633;
+}
+#button:hover{
+    background: rgb(76, 76, 216);
+}
