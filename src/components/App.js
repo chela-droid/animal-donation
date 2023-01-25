@@ -3,7 +3,7 @@ import '../App.css';
 import Home from './Home';
 import AdoptPet from './AdoptPet';
 
-const API = "http://localhost:8001/pets"
+const API = "http://localhost:3000/pets"
 
 
 function App() {
