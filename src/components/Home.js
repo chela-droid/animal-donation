@@ -16,7 +16,6 @@ function Home(){
       <img src={img} alt="Adorable Pet" style={{ width: '50%',paddingRight:'40px'}} />
     </div>
 </section>
-
         </>
     )
 } 
