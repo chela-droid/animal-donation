@@ -1,29 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
 
-const PetCard = (props) => {
-    const [pet, setPet] = useState({});
-
-    useEffect(() => {
-        fetch(`https://dogsapi-icvs.onrender.com/dogs/${props.id}`)
-            .then(response => response.json())
-            .then(data => setPet(data))
-    }, [props.id])
-
-    return (
-        <div className="card" style={{ width: "18rem" }}>
-            <img src={pet.imageLink} className="card-img-top" alt={pet.name} />
-            <div className="card-body">
-                <h5 className="card-title">{pet.name}</h5>
-                <p className="card-text">ID: {pet.id}</p>
-                <p className="card-text">Breed: {pet.breed}</p>
-                <p className="card-text">Purpose: {pet.purpose}</p>
-                <p className="card-text">Group: {pet.breedGroup}</p>
-                <p className="card-text">Life Span: {pet.lifespan}</p>
-                <p className="card-text">Temperament: {pet.temperament}</p>
-                <p className="card-text">Origin: {pet.origin}</p>
-            </div>
+const PetCard = ({ pet }) => {
+  return (
+    <div className="ui column">
+      <div
+        className="ui card"
+        key={pet.id}
+        onClick={() => console.log("clicked")}
+      >
+        <div className="image">
+          <img alt={pet.name} src={pet.image.url} />
         </div>
-    );
-}
-
+        <div className="content">
+          <div className="header">{pet.name}</div>
+          <div className="meta text-wrap">
+            <h1>Bred for={pet.bred_for}</h1>
+          </div>
+        </div>
+        <div className="extra content">
+          <span>Life-span:{pet.life_span}</span><br>
+          </br>
+          <span>Temperament:{pet.temperament}</span>
+          <span>
+            <div className="ui centre aligned segment basic">
+              <button
+                className="ui mini black button"
+                onClick={() => console.log("been clicked")}
+              >
+                Adopt Me
+              </button>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default PetCard;
