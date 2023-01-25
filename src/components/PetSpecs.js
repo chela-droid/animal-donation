@@ -6,6 +6,7 @@ function PetSpecs({pet}){
       <div className="ui two column centered grid">
         <div className="row">
           <div className="four wide column">
+            
             <img
               alt="oh no!"
               className="ui medium circular image bordered"
