@@ -9,6 +9,8 @@ const API = "http://localhost:8001/pets"
 function App() {
 
   const [pets, setPets]= useState([])
+  const [page, setPage] = useState("/")
+
 
   useEffect(()=>{
     fetch (API)
