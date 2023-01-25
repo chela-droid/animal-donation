@@ -1,11 +1,7 @@
 import React from "react";
+import {NavLink} from 'react-router-dom'
 
-function Navbar({ onChangePage }) {
-    
-    function handleLinkClick(e) {
-        e.preventDefault()
-        onChangePage(e.target.pathname)
-    }
+function Navbar() {
     
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,19 +13,13 @@ function Navbar({ onChangePage }) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a onClick={handleLinkClick} className="nav-link active" aria-current="page" href="/">Home</a>
+        <NavLink to="/">Home</NavLink>
         </li>
         <li className="nav-item">
-          <a onClick={handleLinkClick} className="nav-link" href="/about">About Us</a>
+        <NavLink to="/about">AboutUs</NavLink>
         </li>
         <li className="nav-item">
-          <a onClick={handleLinkClick} className="nav-link" href="/adopt">Adopt</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#"></a>
-        </li>
-        <li className="nav-item">
-          <a onClick={handleLinkClick} className="nav-link" href="#" tabindex="-1" aria-disabled="true"></a>
+        <NavLink to="/adopt">AdoptPet</NavLink>
         </li>
       </ul>
     </div>

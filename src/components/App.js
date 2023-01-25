@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Route, Routes } from "react-router-dom";
 import '../App.css';
 import Home from './Home';
 import AdoptPet from './AdoptPet';
@@ -11,21 +12,6 @@ const API = "http://localhost:8001/pets"
 function App() {
 
   const [pets, setPets] = useState([])
-  const [page, setPage] = useState("/")
-
-  function getCurrentPage() {
-    switch (page) {
-      case "/":
-        return <Home/>
-      case "/about":
-        return <AboutUs/>
-      case "/adopt":
-        return <AdoptPet pets={pets} />
-
-      default:
-        return <h1>404 not found</h1>
-    }
-  }
 
 
   useEffect(() => {
@@ -36,10 +22,13 @@ function App() {
   }, [])
   return (
     <>
-      <div>
-        <Navbar onChangePage={setPage} />
-        {getCurrentPage()}
-      </div>
+      <Navbar />
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="about" element={<AboutUs />} />
+      <Route path="adopt" element={<AdoptPet pets={pets}/>} />
+      </Routes>
+
     </>
   );
 }
