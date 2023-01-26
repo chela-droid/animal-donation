@@ -22,7 +22,7 @@ function AddPet({onAddPet}){
     }
 
     function handleSubmit(){
-        fetch("http://localhost:8001/pets",{
+        fetch("https://dogsjson.onrender.com/pets",{
             method:"POST",
             headers:{
                 "content-Type":"application/json",

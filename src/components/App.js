@@ -9,12 +9,14 @@ import Footer from "./Footer";
 import AddPet from "./AddPet";
 import PetSpecs from "./PetSpecs";
 
+const API = "https://dogsjson.onrender.com/pets"
+
 function App() {
   const [pets, setPets] = useState([]);
   const [selectedPet, setSelectedPet] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/pets")
+    fetch("https://dogsjson.onrender.com/pets")
       .then((r) => r.json())
       .then((data) => setPets(data));
   }, []);
