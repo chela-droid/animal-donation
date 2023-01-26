@@ -6,6 +6,7 @@ function AddPet({onAddPet}){
 
     const [formData,setFormData]=useState({
         name:"",
+        image:"",
         bred_for:"",
         life_span:"",
         temperament:"",
@@ -13,6 +14,7 @@ function AddPet({onAddPet}){
     })
     
     function handleChange(e){
+       
           setFormData({
             ...formData,
             [e.target.name]:e.target.value
@@ -30,19 +32,23 @@ function AddPet({onAddPet}){
         .then((resp)=>(resp.json)())
         .then((formData)=>onAddPet(formData))
 
-        
     }
 
+    
+
     return(
-         <div  onSubmit={handleSubmit} id="form">
-        <form>
+         <div id="form">
+        <form onSubmit={handleSubmit}> 
+            <h3 className="headers">Add Your Pet Here</h3>
             <input onChange={handleChange} placeholder="name" type="text" name="name" value={formData.name}></input>
+            <input onChange={handleChange} placeholder="image" type="text" name="image" value={formData.image.url}></input>
             <input onChange={handleChange} placeholder="bred_for" type="text" name="bred_for" value={formData.bred_for}></input >
             <input onChange={handleChange} placeholder="life_span" type="text" name="life_span" value={formData.life_span}></input>
-            <input onChange={handleChange} placeholder="temperament" type="text" name="temperament" value={formData.temperament}></input>
+            <input onChange={handleChange} placeholder="temperament" type="text" name="temperament" value={formData.temperament} required></input>
             <button id="button">Add Pet</button>   
         </form>
         </div>
+       
     ) 
     
 }

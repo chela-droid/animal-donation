@@ -45,3 +45,28 @@ input{
     margin-left: 35%;
 
 }
+.about-us{
+    background-color: #fba633;
+    display: flex;
+    
+}
+
+.img-about{
+    width: 50%; 
+    
+
+}
+.p-about{
+    width: 50%;
+    margin-top: 3%;
+    font-size: 20px;
+
+
+}
+.about-us img{
+    border-radius: 80%;
+    height: 100vh;
+}
+.headers{
+    text-align: center;
+}
