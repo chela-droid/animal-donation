@@ -33,8 +33,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="about" element={<AboutUs />} />
       <Route path="adopt" element={<AdoptPet pets={pets}/>} />
+      <Route path="/addpet" element={<AddPet onAddPet={handleAddPet}/>} />
       </Routes>
-      <AddPet onAddPet={handleAddPet}/>
       <Footer/>
     </>
   );
