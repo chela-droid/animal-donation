@@ -1,0 +1,16 @@
+#adopt{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 15px;
+}
+#adopt:hover{
+    background: aqua;
+}
+#adoptpet{
+    padding: 15px;
+}
+#adopt1{
+    margin-left: 35%;
+}
