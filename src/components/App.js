@@ -6,6 +6,10 @@ import AdoptPet from './AdoptPet';
 import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import Footer from './Footer';
+import PetSpecs from './PetSpecs';
+
+
+
 
 const API = "http://localhost:8001/pets"
 
@@ -21,14 +25,19 @@ function App() {
       .then(setPets)
 
   }, [])
+//show selected pet
+
   return (
     <>
       <Navbar/>
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="about" element={<AboutUs />} />
-      <Route path="adopt" element={<AdoptPet pets={pets}/>} />
+      <Route path="adopt" element={<AdoptPet pets={pets} />}/>
+      <Route path="specs" element={<PetSpecs pet={pets}/>}/>
       </Routes>
+      
+
       <Footer/>
     </>
   );
