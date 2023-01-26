@@ -1,43 +1,24 @@
 import React from "react";
-//import PetSpecs from "./PetSpecs";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 
-const PetCard = ({ pet,  deletePet }) => {
-  return (
-    
-    <div className="ui column">
-      <div
-        className="ui card"
-        key={pet.id}
-        
-      >
-        <div className="image">
-          <img alt={pet.name} src={pet.image.url} />
-        </div>
-        <div >
-          {pet.name} 
-        </div>
-        
-        
-          <span>
-            <div className="ui centre aligned segment basic">
-              <button
-                className="ui mini black button"
-                onClick={(e) =>{ e.stopPropagation();
-                deletePet(pet)}}
-              >
-                Remove
-              </button>
+function PetCard(props) {
+    return (
+        <>
+            <div className="card">
+                <img src={props.pet.image.url} className="card-img-top" alt={props.pet.image.url} />
+                <div className="card-body">
+                    <Link to={{
+                        pathname: '/petcard',
+                        state: 'dsfff'
+                    }}>{props.pet.name}</Link>
+                    <h5 className="card-title">{props.pet.name}</h5>
+                    <p className={props.pet.bred_for}></p>
+                    <p className={props.pet.life_span}></p>
+                    <p className={props.pet.temperament}></p>
+                </div>
             </div>
-            <div>
-              <Link to="/specs">Read More</Link>
-            </div>
-          </span>
-          
-        </div>
-      </div>
-   
-  );
-};
+        </>
+    )
+}
 export default PetCard;
