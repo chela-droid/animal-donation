@@ -8,7 +8,7 @@ import AboutUs from './AboutUs';
 import Footer from './Footer';
 import AddPet from './AddPet';
 
-const API = "http://localhost:8001/pets"
+const API = "https://dogsjson.onrender.com/pets"
 
 
 function App() {
