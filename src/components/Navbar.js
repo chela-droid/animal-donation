@@ -23,6 +23,9 @@ function Navbar() {
         </li>
         <li className="nav-item">
           <NavLink to="/addpet"> AddPet</NavLink>
+          </li>
+        <li className="nav-item">
+          <NavLink to="/Cart"> Cart</NavLink>
         </li>
       </ul>
     </div>

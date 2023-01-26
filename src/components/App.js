@@ -7,8 +7,8 @@ import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import Footer from './Footer';
 import AddPet from './AddPet';
-
-const API = "http://localhost:8001/pets"
+import Cart from './Cart';
+const API = "http://localhost:3000/pets"
 
 
 function App() {
@@ -34,6 +34,8 @@ function App() {
       <Route path="about" element={<AboutUs />} />
       <Route path="adopt" element={<AdoptPet pets={pets}/>} />
       <Route path="/addpet" element={<AddPet onAddPet={handleAddPet}/>} />
+      <Route path="/Cart" element={<Cart />} />
+
       </Routes>
       <Footer/>
     </>
