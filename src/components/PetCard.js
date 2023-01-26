@@ -24,7 +24,7 @@ const PetCard = ({ pet }) => {
           <span>
             <div className="ui centre aligned segment basic">
               <button
-                className="ui mini black button"
+                className="ui mini green button"
                 onClick={() => console.log("been clicked")}
               >
                 Adopt Me
